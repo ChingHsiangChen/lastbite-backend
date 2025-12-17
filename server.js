@@ -13,7 +13,7 @@ app.use(express.json());
 
 // ✅ CORS: allow local dev + deployed frontend(s)
 const allowedOrigins = process.env.NODE_ENV === 'production' 
-  ? ["https://lastbite.wuaze.com/"]
+  ? ["https://lastbite.wuaze.com"]
   : ["http://localhost:5173"];
 
 app.use(
