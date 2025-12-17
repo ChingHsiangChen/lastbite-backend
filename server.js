@@ -12,11 +12,9 @@ const app = express();
 app.use(express.json());
 
 // ✅ CORS: allow local dev + deployed frontend(s)
-const allowedOrigins = [
-  "http://localhost:5173",
-
-  process.env.CLIENT_ORIGIN, // set this on Render to your frontend URL (Netlify/Vercel/Render Static)
-].filter(Boolean);
+const allowedOrigins = process.env.NODE_ENV === 'production' 
+  ? ["https://lastbite.wuaze.com/"]
+  : ["http://localhost:5173"];
 
 app.use(
   cors({
