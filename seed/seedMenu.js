@@ -20,7 +20,7 @@ const data = [
 ];
 
 (async () => {
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect(process.env.MONGODB_URI);
   await MenuItem.deleteMany({});
   await MenuItem.insertMany(data);
   console.log("Seeded menu!");
