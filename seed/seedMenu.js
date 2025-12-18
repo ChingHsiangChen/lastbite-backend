@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 
 // ✅ absolute import so it works regardless of where you run it from
-const MenuItem = require(path.join(__dirname, "models", "MenuItem"));
+const MenuItem = require(path.join(__dirname, "..", "models", "MenuItem"));
 
 const data = [
   {
