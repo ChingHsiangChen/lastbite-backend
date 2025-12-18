@@ -78,7 +78,7 @@ const data = [
 (async () => {
   try {
     // ✅ IMPORTANT: seed the SAME URI that Render uses for the backend
-    const uri = process.env.MONGODB_URI; // use this only, to avoid seeding the wrong DB
+    const uri = "mongodb+srv://chinghsiangchen:ching741852963@lastbite.70av91z.mongodb.net/lastbite?retryWrites=true&w=majority&appName=lastbite"; // use this only, to avoid seeding the wrong DB
     if (!uri) throw new Error("Missing MONGODB_URI in environment variables.");
 
     await mongoose.connect(uri);
